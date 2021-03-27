@@ -14,7 +14,7 @@ export class TravelDetailsComponent implements OnInit {
     private cartService: CartService
   ) {}
   addToCart(product) {
-    window.alert('Your product has been added to the cart!');
+    window.alert('Your Travel has been added to the cart! please Check out :)');
 
     this.cartService.addToCart(product);
   }

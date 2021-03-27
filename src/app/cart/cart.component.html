@@ -1,14 +1,46 @@
- <div class="container">
-<h3>Cart</h3>
+ 
 
 
-<div class="cart-item" *ngFor="let item of items">
 
- <span>{{ item.name }} </span>
-
- <p>{{ item.price | currency }}</p>
-
+<div class="container">
+<h3 class="text-center border border-primary bg-dark text-light p-2">Cart</h3>
+<ul class="list-group pb-0" *ngFor="let item of items">
+    
+    <li class="list-group-item">{{item.destination}}</li>
+    <li class="list-group-item">{{ item.price | currency }}</li>
+    <li class="list-group-item">A fourth item</li>
+    <li class="list-group-item">And a fifth one</li>
+  </ul>
 </div>
-</div>
 
 
+<form [formGroup]="checkoutForm" (ngSubmit)="onSubmit(checkoutForm.value)">
+  <div>
+
+    <label for="name">
+ 
+      Name
+ 
+    </label>
+ 
+    <input id="name" type="text" formControlName="name">
+ 
+  </div>
+ 
+ 
+  <div>
+ 
+    <label for="address">
+ 
+      Address
+ 
+    </label>
+ 
+    <input id="address" type="text" formControlName="address">
+ 
+  </div>
+
+  <button class="button" type="submit">Purchase</button>
+
+
+ </form>

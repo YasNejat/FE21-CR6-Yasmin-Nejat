@@ -1,18 +1,19 @@
 
-<div class="container  p-5 g-0">
+<div class="container">
   
 
-<div class="card text-white p-2 m-2 ownCard" *ngFor="let product of products ; index as productId">
-  <img src="{{product.image}}" class="card-img-top p-2 ownCard" alt="Travelpic">
+<div class="card text-white p-2 ownStyle" *ngFor="let product of products ; index as productId">
+  <img src="{{product.image}}" class="card-img-top p-2" alt="Travelpic" height="600px">
 
-  <div class="card-img g-0">
+  <div class="card-img p-2">
 
-    <a class="card-title " routerLink="../products/{{productId}}"> Destination: {{product.destination}}</a>
+    <a class="card-title col-md-12" routerLink="../products/{{productId}}"> Destination: {{product.destination}}</a>
    
 
-<div class="card-text" *ngIf="product.description">description : {{product.description}}</div>
-    <p class="card-text" *ngIf="product.startDate">Start Date: {{product.startDate}}</p>
-    <p class="card-text" *ngIf="product.price"> Price : {{product.price}} $</p>
+<h5 class="card-text col-md-12 mt-2 text-center" *ngIf="product.description"> {{product.description}}</h5>
+<h4 class="card-text text-danger" *ngIf="product.price"> Price : {{product.price}} $</h4>
+    <p class="card-text col-md-12 text-light text-center" *ngIf="product.startDate">Start Date: {{product.startDate}}</p>
+    
     
   </div>
 </div>
