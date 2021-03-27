@@ -1,50 +1,62 @@
- 
-
-
-
 <div class="container">
-<h3 class="text-center border border-primary bg-dark text-light p-2">Cart</h3>
-<ul class="list-group pb-0" *ngFor="let item of items">
-    
-    <li class="list-group-item">{{item.destination}}</li>
+  <h3 class="text-center border border-primary bg-dark text-light p-2">Cart</h3>
+  <ul class="list-group pb-0" *ngFor="let item of items">
+    <li class="list-group-item">{{ item.destination }}</li>
     <li class="list-group-item">{{ item.price | currency }}</li>
-    
   </ul>
 
-<!-- form -->
+  <!-- form -->
 
-<div class="comtainer " [formGroup]="checkoutForm" (ngSubmit)="onSubmit(checkoutForm.value)">
+  <div
+    class="comtainer"
+    [formGroup]="checkoutForm"
+    (ngSubmit)="onSubmit(checkoutForm.value)"
+  >
+    <form class="row g-3">
+      <div class="col-md-6">
+        <label for="name" class="form-label">First Name:</label>
+        <input
+          type="text"
+          class="form-control"
+          id="name"
+          formControlName="name"
+        />
+      </div>
 
-  <form class="row g-3" >
-  <div class="col-md-6">
-    <label for="name" class="form-label">First Name:</label>
-    <input type="text" class="form-control" id="name" formControlName="name">
-  </div>
-  
-  <div class="col-md-6">
-    <label for="familyname" class="form-label">Family Name:</label>
-    <input type="text" class="form-control" id="familyname" formControlName="familyname">
-  </div>
-  
-  <div class="col-md-6">
-    <label for="email" class="form-label">Email</label>
-    <input type="email" class="form-control" id="email" formControlName="email">
-  </div>
-  
-  <div class="col-12">
-    <label for="address" class="form-label">Address</label>
-    <input type="text" class="form-control" id="address" placeholder="1234 Main St" formControlName="address">
-  </div>
- 
-  
- 
- 
- 
-  <div class="col-12">
-    <button type="submit" class="btn btn-primary">Purchase</button>
-  </div>
-</form>
+      <div class="col-md-6">
+        <label for="familyname" class="form-label">Family Name:</label>
+        <input
+          type="text"
+          class="form-control"
+          id="familyname"
+          formControlName="familyname"
+        />
+      </div>
 
+      <div class="col-md-6">
+        <label for="email" class="form-label">Email</label>
+        <input
+          type="email"
+          class="form-control"
+          id="email"
+          formControlName="email"
+        />
+      </div>
 
+      <div class="col-12">
+        <label for="address" class="form-label">Address</label>
+        <input
+          type="text"
+          class="form-control"
+          id="address"
+          placeholder="1234 Main St"
+          formControlName="address"
+        />
+      </div>
+
+      <div class="col-12">
+        <button type="submit" class="btn btn-primary">Purchase</button>
+      </div>
+    </form>
+  </div>
 </div>
-

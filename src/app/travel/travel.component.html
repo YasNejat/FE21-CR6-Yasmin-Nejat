@@ -1,23 +1,43 @@
-
 <div class="container">
-  
+  <div
+    class="card text-white p-2 ownStyle"
+    *ngFor="let product of products; index as productId"
+  >
+    <img
+      src="{{ product.image }}"
+      class="card-img-top p-2"
+      alt="Travelpic"
+      height="600px"
+    />
 
-<div class="card text-white p-2 ownStyle" *ngFor="let product of products ; index as productId">
-  <img src="{{product.image}}" class="card-img-top p-2" alt="Travelpic" height="600px">
+    <div class="card-img p-2">
+      <a class="card-title col-md-12" routerLink="../products/{{ productId }}">
+        Destination: {{ product.destination }}</a
+      >
 
-  <div class="card-img p-2">
+      <h5
+        class="card-text col-md-12 mt-2 text-center"
+        *ngIf="product.description"
+      >
+        {{ product.description }}
+      </h5>
 
-    <a class="card-title col-md-12" routerLink="../products/{{productId}}"> Destination: {{product.destination}}</a>
-   
+      <div
+        class="card-text col-md-12 mb-2 text-start fs-5 fst-italic"
+        *ngIf="product.description"
+      >
+        Duration: {{ product.duration }}
+      </div>
 
-<h5 class="card-text col-md-12 mt-2 text-center" *ngIf="product.description"> {{product.description}}</h5>
-
-<div class="card-text col-md-12 mb-2 text-start fs-5 fst-italic" *ngIf="product.description"> Duration: {{product.duration}}</div>
-
-<h4 class="card-text text-danger" *ngIf="product.price"> Price : {{product.price}} $</h4>
-    <p class="card-text col-md-12 text-light text-center" *ngIf="product.startDate">Start Date: {{product.startDate}}</p>
-    
-    
+      <h4 class="card-text text-danger" *ngIf="product.price">
+        Price : {{ product.price }} $
+      </h4>
+      <p
+        class="card-text col-md-12 text-light text-center"
+        *ngIf="product.startDate"
+      >
+        Start Date: {{ product.startDate }}
+      </p>
+    </div>
   </div>
-</div>
 </div>
