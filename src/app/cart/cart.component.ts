@@ -40,10 +40,15 @@ export class CartComponent implements OnInit {
   
   }
   
-//   ngAfterContentChecked()  {
-//     this.total = this.items.reduce(funtion()=> {
-//      total= total+ (item.price * item.qty);
-//     }, 0);
-// }
+getTotal() {
+  let total = 0;
+  for (var i = 0; i < this.items.length; i++) {
+      if (this.items[i].price) {
+          total += this.items[i].price;
+          this.total = total;
+      }
+  }
+  return total;
+}
 
 }

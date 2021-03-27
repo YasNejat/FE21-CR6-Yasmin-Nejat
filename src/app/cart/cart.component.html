@@ -1,10 +1,19 @@
 <div class="container">
+
   <h3 class="text-center border border-primary bg-dark text-light p-2">Cart</h3>
   <ul class="list-group pb-0" *ngFor="let item of items">
     <li class="list-group-item">{{ item.destination }}</li>
+   
+   
     <li class="list-group-item">{{ item.price | currency }}</li>
+     
   </ul>
+  
+<div class="list-group-item p-2 bg-dark fs-5 text-light"> 
+<label for="text" class="p-2">Total </label>
+  <input type="text" value=' {{ getTotal() }} $'> 
 
+</div>
   <!-- form -->
 
   <div
@@ -55,7 +64,7 @@
       </div>
 
       <div class="col-12">
-        <button type="submit" class="btn btn-primary">Purchase</button>
+        <button type="submit" class="btn btn-warning">Purchase</button>
       </div>
     </form>
   </div>
