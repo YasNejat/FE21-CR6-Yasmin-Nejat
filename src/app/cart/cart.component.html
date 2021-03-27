@@ -8,39 +8,43 @@
     
     <li class="list-group-item">{{item.destination}}</li>
     <li class="list-group-item">{{ item.price | currency }}</li>
-    <li class="list-group-item">A fourth item</li>
-    <li class="list-group-item">And a fifth one</li>
+    
   </ul>
+
+<!-- form -->
+
+<div class="comtainer " [formGroup]="checkoutForm" (ngSubmit)="onSubmit(checkoutForm.value)">
+
+  <form class="row g-3" >
+  <div class="col-md-6">
+    <label for="name" class="form-label">First Name:</label>
+    <input type="text" class="form-control" id="name" formControlName="name">
+  </div>
+  
+  <div class="col-md-6">
+    <label for="familyname" class="form-label">Family Name:</label>
+    <input type="text" class="form-control" id="familyname" formControlName="familyname">
+  </div>
+  
+  <div class="col-md-6">
+    <label for="email" class="form-label">Email</label>
+    <input type="email" class="form-control" id="email" formControlName="email">
+  </div>
+  
+  <div class="col-12">
+    <label for="address" class="form-label">Address</label>
+    <input type="text" class="form-control" id="address" placeholder="1234 Main St" formControlName="address">
+  </div>
+ 
+  
+ 
+ 
+ 
+  <div class="col-12">
+    <button type="submit" class="btn btn-primary">Purchase</button>
+  </div>
+</form>
+
+
 </div>
 
-
-<form [formGroup]="checkoutForm" (ngSubmit)="onSubmit(checkoutForm.value)">
-  <div>
-
-    <label for="name">
- 
-      Name
- 
-    </label>
- 
-    <input id="name" type="text" formControlName="name">
- 
-  </div>
- 
- 
-  <div>
- 
-    <label for="address">
- 
-      Address
- 
-    </label>
- 
-    <input id="address" type="text" formControlName="address">
- 
-  </div>
-
-  <button class="button" type="submit">Purchase</button>
-
-
- </form>

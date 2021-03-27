@@ -8,14 +8,19 @@ import { FormBuilder } from '@angular/forms';
 })
 export class CartComponent implements OnInit {
   items;
+  
   checkoutForm;
+  total:number;
+ 
+
   constructor(private cartService: CartService,private formBuilder: FormBuilder) {
     this.checkoutForm = this.formBuilder.group({
 
       name: '',
- 
-      address: ''
- 
+      familyname:'',
+      address: '',
+      email:''
+      
     });
    }
 
@@ -34,5 +39,11 @@ export class CartComponent implements OnInit {
     this.checkoutForm.reset();
   
   }
+  
+//   ngAfterContentChecked()  {
+//     this.total = this.items.reduce(funtion()=> {
+//      total= total+ (item.price * item.qty);
+//     }, 0);
+// }
 
 }

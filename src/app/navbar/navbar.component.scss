@@ -7,10 +7,16 @@
 .ownImage{
 width: 100px;
 height: 100px;
+
+
 }
 a{
     color: rgb(250, 247, 246)!important;
+ margin-right: 20px;
+}  
 
  
-}   
 
+a:hover {
+    background-color: brown;
+  }
