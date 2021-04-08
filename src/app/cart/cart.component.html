@@ -11,8 +11,11 @@
   
 <div class="list-group-item p-2 bg-dark fs-5 text-light"> 
 <label for="text" class="p-2">Total </label>
-  <input type="text" value=' {{ getTotal() }} $'> 
+  <!-- <del type="text" style="width: 200px;" value=' {{ getTotal() }} $'>  -->
+<del> {{ getTotal() }} $</del>
+<br>
 
+<span> 20% discount:{{ getTotal()*0.8 }} $</span>
 </div>
   <!-- form -->
 

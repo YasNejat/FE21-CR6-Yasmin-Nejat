@@ -17,3 +17,21 @@ img {
   color: brown;
   font-size: 18px;
 }
+@media (max-width: 575.98px) { 
+
+img{
+width: 270px!important;
+}
+  
+ }
+
+
+@media (max-width: 991.98px) {
+  img {
+    width: 300px;
+    padding: 20px;
+  }
+  .ownStyle1 {
+    padding: 70px;
+  }
+}

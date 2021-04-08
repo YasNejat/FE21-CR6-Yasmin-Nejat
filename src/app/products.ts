@@ -1,7 +1,7 @@
 export const products = [
     {
       
-      destination: 'Tirol',
+      destination: 'Kyoto',
       duration: '1 Week',
       price: 799,
       description: 'In Japanese, Kyoto was previously called Kyō (京), Miyako (都), or Kyō no Miyako (京の都). In the 11th century, the city was renamed "Kyōto" (京都, "capital city")',
@@ -23,7 +23,7 @@ export const products = [
   
     {
       
-      destination: 'Kyoto',
+      destination: 'Tirol',
       duration: '8 Days',
       price: 299,
       description: 'Tyrol has an area of 26,673 km2. The region consists of the State of Tyrol, the Province of South Tyrol and the Province of Trento. In addition to the region belong the municipalities Cortina dAmpezzo, Livinallongo del Col di Lana, Colle Santa Lucia and Pedemonte from the Region of Veneto and Valvestino and Magasa from the Region of Lombardy. The largest cities in Tyrol are Innsbruck, Trento and Bolzano.',

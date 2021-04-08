@@ -12,3 +12,12 @@ h1 {
 p {
   color: rgb(137, 97, 97);
 }
+@media (max-width: 575.98px) {
+  
+  h1{
+    font-size: 20px;
+    padding: 20px;
+    width: 300px;
+    
+  }
+  }

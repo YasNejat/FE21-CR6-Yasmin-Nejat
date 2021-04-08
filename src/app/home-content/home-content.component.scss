@@ -11,3 +11,24 @@ img {
 .ownColor {
   color: rgb(224, 185, 185);
 }
+@media (max-width: 575.98px) {
+img{
+  display: none;
+}
+.ownColor{
+  font-size: 10px;
+  
+}
+}
+@media (max-width: 991.98px) { 
+
+img{
+  width: 200px;
+}
+.ownContainer {
+  padding: 40px;
+  height: 450px;
+}
+
+ }
+

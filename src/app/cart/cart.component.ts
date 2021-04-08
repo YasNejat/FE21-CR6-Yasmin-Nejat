@@ -48,7 +48,9 @@ getTotal() {
           this.total = total;
       }
   }
-  return total;
-}
+ 
+  return (total);
+} 
 
+ 
 }
